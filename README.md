@@ -1,4 +1,4 @@
-# vue-firebase-tutorial
+# FreeManga
 
 > A Vue.js project
 
