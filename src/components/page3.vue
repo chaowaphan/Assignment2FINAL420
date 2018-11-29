@@ -2,13 +2,7 @@
   <div class="page3">
     
     <article v-for="(location, idx) in PAGE3" :key="idx">
-      <img :src="location.image1">
-    </article>
-    <article v-for="(location, idx) in PAGE3" :key="idx">
-      <img :src="location.image2">
-    </article>
-    <article v-for="(location, idx) in PAGE3" :key="idx">
-      <img :src="location.image3">
+      <img :src="location.image">    
     </article>
 
     <ul>            
@@ -30,7 +24,7 @@ export default {
   },
   firestore () {
     return {
-      PAGE3: db.collection('PAGE3')
+      PAGE3: db.collection('PAGE3').orderBy('num')
     }
   },
   methods: {
@@ -49,7 +43,7 @@ h1, h2 {
   font-weight: normal;
 }
 
-img{width: 350px;}
+img{width: 40%;}
 ul {
   list-style-type: none;
   padding: 0;
